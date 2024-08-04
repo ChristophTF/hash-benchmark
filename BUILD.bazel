@@ -1,0 +1,11 @@
+cc_binary(
+  name = "main",
+  deps = [
+      "@abseil-cpp//absl/container:flat_hash_set",
+      "@abseil-cpp//absl/container:flat_hash_map",
+      "@com_github_google_benchmark//:benchmark_main",
+      "@xxhash//:xxhash",
+  ],
+  srcs = ["main.cpp"],
+  copts = ["-std=c++20"],
+)
